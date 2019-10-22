@@ -13,4 +13,6 @@ router.post( '/login', HandlerGenerator.login);
 
 router.post('/users', HandlerGenerator.signup)
 
+router.get('/admin', middleware.checkToken, HandlerGenerator.admin);
+
 module.exports = router;
