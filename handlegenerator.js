@@ -12,15 +12,9 @@ class HandlerGenerator {
         // Extrae el usuario y la contraseña especificados en el cuerpo de la solicitud
         var username = req.body.username;
         var password = req.body.password;
+        // Calcula el hash de la contraseña para que sea guardada oculta en la base de datos
         var md5 = require("md5");
         var hashPassword = md5(password);
-        // Este usuario y contraseña, en un ambiente real, deben ser traidos de la BD
-        /*
-                let mockedUsername = 'admin';
-                let mockedPassword = 'password';
-        */
-        let mockedUsername = ''
-        let mockedPassword = ''
 
         if (username && password) {
 
@@ -82,11 +76,13 @@ class HandlerGenerator {
         var md5 = require('md5');
         let passwordHash = md5(req.body.password);
         console.log(`Password hash: ${passwordHash}`);
+        console.log(`Roles: ${req.body.roles}`)
 
         conn.then(client => {
             let usuario = {
                 "username": req.body.username,
-                "password": passwordHash
+                "password": passwordHash,
+                "roles": req.body.roles
             }
             let response = client.db("jwttest").collection("users").insertOne(usuario);
             response.then(value => {
