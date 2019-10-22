@@ -1,6 +1,6 @@
 # Ejercicio JWT
 
-## Ejecucion
+## Ejecución
 - `npm install`
 - `npm start`
 
