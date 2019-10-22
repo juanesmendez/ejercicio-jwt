@@ -124,7 +124,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"username\": \"ronaldo\",\n\t\"password\": \"uniandes\",\n\t\"roles\": [\n\t\t\"user\",\n\t\t\"admin\"\n\t]\n}",
+					"raw": "{\n\t\"username\": \"ronaldo\",\n\t\"password\": \"uniandes\",\n\t\"roles\": [\n\t\t\"user\",\n\t\t\"admin\",\n\t\t\"client\"\n\t]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
