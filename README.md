@@ -1,4 +1,4 @@
-# ejercicio-jwt
+# Ejercicio JWT
 
 ## Ejecucion
 - `npm install`
